@@ -1,0 +1,837 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    font-family: "Rubik", sans-serif;
+    padding: 36px 36px;
+    position: relative;
+    z-index: 2;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(251, 251, 251, 0.847);
+    transition: all ease-in-out 300ms;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+}
+
+a:hover{
+    transform: translateY(-3px);
+    color: rgba(32, 32, 32, 0.906);
+}
+
+.uil-align-center-alt,.uil-times{
+    font-size: 42px;
+    color: rgb(27, 27, 27);;
+}
+
+.hidden{
+    display: none;
+}
+
+.menu_close{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+.hero_img_container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+
+
+
+
+.hero_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    gap: 24px;
+    padding: 24px 36px;
+}
+
+.hover-image {
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+    pointer-events: none; /* Prevents cursor issues */
+}
+
+.uil-align-center-alt,.uil-times{
+    position: relative;
+    z-index: 2000;
+}
+
+
+.side_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 120px 36px;
+    position: absolute;
+    top: 0;
+    width: 175px;
+    left: -200px;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    box-shadow: 4px 7px 20px 0px #0000001c;
+    z-index: 1;
+    transition: left 400ms ease-in-out;
+}
+
+.side_menu.open {
+    left: 0; 
+}
+
+
+
+
+
+
+
+.hero_text h2{
+    font-size: clamp(32px, 10vw, 80px);
+    font-weight: 400;
+    color: rgb(236, 236, 236);
+    font-family: "Bebas Neue", sans-serif;
+    cursor: pointer;
+    transition: all ease-out 500ms;
+    
+}
+
+.hero_text h2:hover {
+    transform: scale(1.03);
+    
+  }
+
+
+.hero_text p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: rgb(28, 28, 28);
+    font-family: "Rubik", sans-serif; 
+}
+
+
+.hero_image{
+    width: 350px;
+   
+}
+
+.car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+}
+
+.hero_image1{
+    width: 10%;
+    transform: rotateY('angle');
+}
+
+
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    gap: 36px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px; 
+    
+}
+
+.cta{
+    padding: 14px 52px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #00000096;
+    color: #00000096;
+    transition: all ease-in-out 600ms;
+    cursor: pointer;
+}
+
+.cta:hover{
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+
+.social_icons{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    padding-top: 4px;
+    
+}
+
+.h:hover{
+    transform: translateY(-2px);
+    color: rgb(41, 41, 41);
+}
+
+.h{
+    transition: all ease-in-out 300ms;
+    font-size: 24px;
+    color: #00000096;
+    cursor: pointer;
+}
+
+
+.bg{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    
+}
+.bg h1{
+    position: absolute;
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.144);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 10vw;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8b2cff 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 50%;
+}
+
+
+.about_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 36px;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.about_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.img-pos{
+    position: absolute;
+    width: 700px;
+    left:  -300px;
+    top: 25px;
+    z-index: -1;
+    opacity: 40%;
+}
+
+.img-pos1{
+    position: absolute;
+    width: 700px;
+    right:  -300px;
+    bottom: 0;
+    z-index: -1;
+    opacity: 40%;
+}
+
+.about_text h1{
+    font-size: 72px;
+    font-family: "Rubik", sans-serif; 
+    max-width: 800px;
+}
+
+
+
+.about_text p{
+    max-width: 900px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+}
+
+
+.f-container{
+    width: 400px;
+}
+
+.founder-img{
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+}
+
+.founder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 36px 62px 36px;
+    text-align: center;
+    gap: 38px;
+    position: relative;
+    
+   
+}
+
+.bgmi{
+    position: relative;
+    
+}
+.bgmi::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjust this value to control how much of the top part is covered */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; /* Makes sure it doesn't interfere with other interactions */
+    z-index: -1;
+  }
+
+.bgi{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    opacity: 12%;
+    
+}
+.founder h1{
+    font-size: 36px;
+    font-family: "Rubik", sans-serif; 
+    max-width: 800px;
+    font-weight: 400;
+}
+
+
+.founder p{
+    max-width: 900px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+}
+
+.vission_mission{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 36px 100px 36px;
+    text-align: center;
+    gap: 62px;
+}
+
+
+.vission h1{
+    font-size: 36px;
+    font-family: "Rubik", sans-serif; 
+    padding-bottom: 24px;
+    font-weight: 400;
+}
+
+.vission p{
+    max-width: 900px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+}
+.mission h1{
+    font-size: 36px;
+    font-family: "Rubik", sans-serif; 
+    padding-bottom: 24px;
+    font-weight: 400;
+}
+
+.mission p{
+    max-width: 900px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+}
+
+.courses{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 36px 62px 36px;
+    text-align: center;
+    gap: 32px;
+    position: relative;
+    
+   
+}
+
+.c-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    z-index: -1;
+    height: 100%;
+    width: 800px;
+    opacity: 20%;
+    object-fit: contain;
+}
+
+.courses h1{
+    font-size: 36px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 300;
+    padding: 24px 0px;
+}
+
+/* General styles */
+.c-head h1, .c-photo h1 {
+    font-size: 42px;
+    font-family: "Rubik", sans-serif; 
+    padding-bottom: 24px;
+    font-weight: 600;
+  }
+  
+  .c-head p, .c-photo p {
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+  }
+
+  .video{
+    padding-top: 72px;
+  }
+
+  .video p{
+    font-size: 18px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    line-height: 1.8;
+    max-width: 800px;
+  }
+
+  ul li{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 100;
+    padding-bottom: 8px;
+    
+  }
+  
+  /* Card Style */
+  .card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+   
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 24px;
+    font-family: "Rubik", sans-serif; 
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+  
+  /* Hide the details initially */
+  .course-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px); /* Starting from above */
+    transition: max-height 0.8s ease-out, opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth slide-down */
+  }
+  
+  /* Active state when clicked */
+  .card.active .course-details {
+    max-height: 500px; /* Adjust this value depending on the size of the content */
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+  }
+  
+  .card.active
+  
+
+.folio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:36px;
+    flex-direction: column;
+    gap: 96px;
+}
+
+.folio h1{
+    font-size: 46px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 200;
+    color: #1d1d1dc1;
+    
+
+}
+
+.folio_container{
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+    padding: 120px 36px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-auto-rows: 600px; /* Row height */
+    gap: 24px; /* Adjust spacing */
+    width: 80%;
+    margin: auto;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit nicely */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.item:nth-child(3n) { 
+    grid-column: span 2; /* Stretching every 3rd image */
+    
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 36px;
+    box-shadow: 7px 7px 71px 20px #0000001c;
+}
+
+footer h1{
+    font-size: 28px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    color:#1d1d1dc1;
+}
+
+.social_icons_footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    
+}
+
+.copywrite{
+    
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    color:#1d1d1dc1;
+}
+
+hr{
+    width: 100%;
+    margin-top: 54px;
+    
+    border-top: 1px solid #1d1d1d36;
+}
+
+
+@media only screen and (max-width: 768px){
+    .hidden{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hide{
+        display: none;
+    }
+    nav{
+        justify-content: flex-start;
+        padding: 24px 16px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+    .img-pos{
+        top: 0;
+        left: 0;
+        opacity: 5%;
+        width: 500px;
+    }
+    .img-pos1{
+        top: 200px;
+        right: 0;
+        opacity: 5%;
+        width: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+nav  {
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(30px); /* Starts slightly below */
+    animation: fadeIn 2s ease-in-out forwards;
+   
+}
+
+/* .hero_img_container{
+    opacity: 0;  
+    transform: translateY(30px); 
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero_container , .bg {
+    opacity: 0; 
+    
+    animation: fadeIns 2s ease-in-out forwards;
+} */
+.cta {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 4s; /* Starts after image */
+}
+
+/* Social Icons Animation */
+.social_icons {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 4.5s; /* Slightly after CTA */
+}
+.hero_container , .bg{
+    opacity: 0;
+    animation: fadeIns 2s ease-in-out forwards;
+    animation-delay: 1.5s; /* Start earlier */
+}
+
+.hero_img_container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 3s; /* Start after parent fades in */
+}
+
+
+
+nav {
+    animation-delay: 1.5s;
+}
+
+.bg {
+    animation-delay: 0s;
+}
+
+.hero_container {
+    animation-delay: 2.5s;
+    
+}
+
+.h1bg {
+    animation: fadeOut 5s forwards;
+    animation-delay: 2s; /* delay before it starts fading */
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 40%;
+      
+    }
+  }
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIns {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+        
+    }
+}
+
+
+
+nav, .bg, .hero_container {
+    will-change: opacity, transform;
+}
+
+
+
+
+
+
+
+
+.folio {
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly below */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.folio.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery img {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.gallery img.show {
+    opacity: 1;
+    
+}
+
+
+
+
+.item:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    object-fit: cover; /* Fills screen while maintaining aspect ratio */
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay effect */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
